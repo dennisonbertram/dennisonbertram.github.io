@@ -14,20 +14,20 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#4a4a4a;--head:#121212;--accent:#e38d31;--rule:#bbb;--mute:#777;--tint:#f6f4f1}
+:root{--ink:#4a4a4a;--head:#121212;--accent:#e38d31;--rule:#bbb;--mute:#666;--accent-text:#a85a00;--tint:#f6f4f1}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;padding:19px;background:#fff;color:var(--ink);font:13px/1.45 "Helvetica Neue",Arial,sans-serif;letter-spacing:1px}
 a{color:#000;text-decoration:none;transition:color .15s}
 main a{border-bottom:1px solid var(--rule)}
-a:hover{color:var(--accent)}
+a:hover{color:var(--accent-text)}
 p{margin:0 0 13px}
 .n,.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;letter-spacing:0}
 header{position:absolute;top:19px;left:19px;width:230px;text-align:right}
 .avatar{width:80px;height:80px;border-radius:50%;object-fit:cover;display:block;margin:0 0 16px auto}
 h1{margin:0 0 28px;font:400 23px/.9 Montserrat,sans-serif;letter-spacing:.087em;text-transform:uppercase}
 h1 a{color:var(--head);border:0}
-nav a{display:block;font:400 14px/1.8 Montserrat,sans-serif;text-transform:lowercase;color:var(--accent);letter-spacing:.5px}
+nav a{display:block;font:400 14px/1.8 Montserrat,sans-serif;text-transform:lowercase;color:var(--accent-text);letter-spacing:.5px}
 nav a:hover{color:var(--head)}
 .social{display:flex;justify-content:flex-end;gap:10px;margin-top:28px}
 .social a{display:block;width:16px;height:16px;position:relative;border:0}
@@ -40,7 +40,7 @@ hr{margin:48px 0 40px;height:1px;border:0;background:var(--rule)}
 .meta{color:var(--mute);font-size:12px;margin:0 0 12px}
 .meta a{color:var(--mute)}
 .private{color:var(--mute);font-size:12px}
-.tag{display:inline-block;font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:0;color:var(--accent);border:1px solid var(--accent);padding:3px 6px;margin-left:6px;vertical-align:2px}
+.tag{display:inline-block;font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:0;color:var(--accent-text);border:1px solid var(--accent);padding:3px 6px;margin-left:6px;vertical-align:2px}
 .lead{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px 48px;padding:0 0 40px;margin:0 0 40px;border-bottom:1px solid var(--rule)}
 .lead:last-child{border:0;margin-bottom:0}
 .lead .vis{align-self:start}
@@ -63,7 +63,7 @@ figure{margin:0}
 .rows .meta{margin:2px 0 0;word-break:break-word}
 .rows p{margin:0 0 6px}
 .rows .n{color:var(--head);font-size:14px;font-weight:500}
-.go{color:var(--accent);border-bottom-color:var(--accent)}
+.go{color:var(--accent-text);border-bottom-color:var(--accent)}
 .go:hover{color:var(--head);border-color:var(--head)}
 .bars{display:flex;align-items:flex-end;gap:14px;height:190px}
 .bars>div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;text-align:center}
@@ -75,6 +75,7 @@ figure{margin:0}
 footer{margin:60px 0 0;display:flex;gap:24px;justify-content:center;align-items:center;font-size:12px}
 footer .social{margin:0}
 footer .social a{margin:0 6px}
+@media (max-width:1023px){.lead{grid-template-columns:1fr}}
 @media (max-width:767px){
 body{padding:0}
 header{position:relative;top:0;left:0;width:auto;padding:19px 16px 0;display:flex;align-items:center;gap:14px;text-align:left;flex-wrap:wrap}
