@@ -11,195 +11,225 @@
 <meta property="og:image" content="https://www.dennisonbertram.com/img/portrait-1000.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap">
-<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#4a4a4a;--head:#121212;--accent:#e38d31;--rule:#bbb;--mute:#666;--accent-text:#a85a00;--tint:#f6f4f1}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;padding:19px;background:#fff;color:var(--ink);font:13px/1.45 "Helvetica Neue",Arial,sans-serif;letter-spacing:1px}
+a{color:#000;text-decoration:none;transition:color .15s}
+main a{border-bottom:1px solid var(--rule)}
+a:hover{color:var(--accent-text)}
+p{margin:0 0 13px}
+.n,.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;letter-spacing:0}
+header{position:absolute;top:19px;left:19px;width:230px;text-align:right}
+.avatar{width:80px;height:80px;border-radius:50%;object-fit:cover;display:block;margin:0 0 16px auto}
+h1{margin:0 0 28px;font:400 23px/.9 Montserrat,sans-serif;letter-spacing:.087em;text-transform:uppercase}
+h1 a{color:var(--head);border:0}
+nav a{display:block;font:400 14px/1.8 Montserrat,sans-serif;text-transform:lowercase;color:var(--accent-text);letter-spacing:.5px}
+nav a:hover{color:var(--head)}
+.social{display:flex;justify-content:flex-end;gap:10px;margin-top:28px}
+.social a{display:block;width:16px;height:16px;position:relative;border:0}
+.social svg{position:absolute;left:-8px;top:-8px;width:32px;height:32px;fill:#000}
+main{margin-left:251px;max-width:986px;padding:17px}
+h2{margin:0 0 20px;font:600 15.6px/1.2 Montserrat,sans-serif;letter-spacing:0;color:var(--head)}
+h3{margin:0 0 4px;font:600 15.6px/1.3 Montserrat,sans-serif;letter-spacing:0;color:var(--head)}
+hr{margin:48px 0 40px;height:1px;border:0;background:var(--rule)}
+.bio{max-width:640px}
+.meta{color:var(--mute);font-size:12px;margin:0 0 12px}
+.meta a{color:var(--mute)}
+.private{color:var(--mute);font-size:12px}
+.tag{display:inline-block;font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:0;color:var(--accent-text);border:1px solid var(--accent);padding:3px 6px;margin-left:6px;vertical-align:2px}
+.lead{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px 48px;padding:0 0 40px;margin:0 0 40px;border-bottom:1px solid var(--rule)}
+.lead:last-child{border:0;margin-bottom:0}
+.lead .vis{align-self:start}
+.limit{border-left:2px solid var(--accent);padding-left:12px}
+.bignum{font:500 56px/1 "JetBrains Mono",monospace;letter-spacing:0;color:var(--head)}
+.cmp{font-size:12px;color:var(--mute);margin:6px 0 0}
+.cmp b{font:500 16px "JetBrains Mono",monospace;color:var(--ink)}
+.stat{margin:0 0 18px}
+.stat .n{display:block;font-size:34px;font-weight:500;color:var(--head);line-height:1.1}
+.stat span.l{font-size:12px;color:var(--mute)}
+.pal{display:flex;flex-direction:column;gap:8px;margin:22px 0 0}
+.pal div{display:flex}
+.pal i{width:100%;height:26px;display:block}
+.vis img{width:100%;height:auto;display:block;border:1px solid var(--rule)}
+figcaption,.cap{font-size:12px;color:var(--mute);margin-top:6px}
+figure{margin:0}
+.rows>div{display:grid;grid-template-columns:240px 1fr;gap:4px 48px;padding:14px 12px;margin:0 -12px;border-top:1px solid var(--rule);transition:background .15s}
+.rows>div:hover{background:var(--tint)}
+.rows h3{margin:0}
+.rows .meta{margin:2px 0 0;word-break:break-word}
+.rows p{margin:0 0 6px}
+.rows .n{color:var(--head);font-size:14px;font-weight:500}
+.go{color:var(--accent-text);border-bottom-color:var(--accent)}
+.go:hover{color:var(--head);border-color:var(--head)}
+.bars{display:flex;align-items:flex-end;gap:14px;height:190px}
+.bars>div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;text-align:center}
+.bars i{display:block;background:var(--accent)}
+.bars .v{font:500 12px "JetBrains Mono",monospace;letter-spacing:0;color:var(--head);margin-bottom:4px}
+.bars .w{font-size:11px;color:var(--mute);margin-top:6px;letter-spacing:0}
+.cv p{margin:0 0 13px}
+.cv b{color:var(--head)}
+footer{margin:60px 0 0;display:flex;gap:24px;justify-content:center;align-items:center;font-size:12px}
+footer .social{margin:0}
+footer .social a{margin:0 6px}
+@media (max-width:1023px){.lead{grid-template-columns:1fr}}
+@media (max-width:767px){
+body{padding:0}
+header{position:relative;top:0;left:0;width:auto;padding:19px 16px 0;display:flex;align-items:center;gap:14px;text-align:left;flex-wrap:wrap}
+.avatar{width:64px;height:64px;margin:0}
+h1{margin:0;font-size:20px;flex:1}
+nav{width:100%;display:flex;gap:16px;flex-wrap:wrap;margin-top:4px}
+nav a{font-size:13px}
+header .social{display:none}
+main{margin:0;padding:24px 16px}
+.lead{grid-template-columns:1fr}
+.rows>div{grid-template-columns:1fr}
+.vis.small{max-width:280px}
+}
+</style>
 </head>
 <body>
-<details class="menu"><summary>menu</summary><div class="panel"><a href="/">about</a></div></details>
 <header>
-<h1><a href="/">Dennison Bertram</a></h1>
-<nav class="desk"><a href="/">About</a></nav>
-<div class="social"><a href="https://www.linkedin.com/in/dennison-bertram-ab5bb22" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"/></svg></a><a href="https://github.com/crazyrabbitLTC" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32,16c-8.8,0-16,7.2-16,16c0,7.1,4.6,13.1,10.9,15.2 c0.8,0.1,1.1-0.3,1.1-0.8c0-0.4,0-1.4,0-2.7c-4.5,1-5.4-2.1-5.4-2.1c-0.7-1.8-1.8-2.3-1.8-2.3c-1.5-1,0.1-1,0.1-1 c1.6,0.1,2.5,1.6,2.5,1.6c1.4,2.4,3.7,1.7,4.7,1.3c0.1-1,0.6-1.7,1-2.1c-3.6-0.4-7.3-1.8-7.3-7.9c0-1.7,0.6-3.2,1.6-4.3 c-0.2-0.4-0.7-2,0.2-4.2c0,0,1.3-0.4,4.4,1.6c1.3-0.4,2.6-0.5,4-0.5c1.4,0,2.7,0.2,4,0.5c3.1-2.1,4.4-1.6,4.4-1.6 c0.9,2.2,0.3,3.8,0.2,4.2c1,1.1,1.6,2.5,1.6,4.3c0,6.1-3.7,7.5-7.3,7.9c0.6,0.5,1.1,1.5,1.1,3c0,2.1,0,3.9,0,4.4 c0,0.4,0.3,0.9,1.1,0.8C43.4,45.1,48,39.1,48,32C48,23.2,40.8,16,32,16z"/></svg></a></div>
+<img class="avatar" src="/img/avatar.jpg" alt="Portrait of Dennison Bertram" width="80" height="80">
+<h1><a href="#top">Dennison Bertram</a></h1>
+<nav><a href="#lead">Work</a><a href="#cv">CV</a></nav>
+<div class="social"><a href="https://www.linkedin.com/in/dennison-bertram-ab5bb22" aria-label="LinkedIn"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"/></svg></a><a href="https://github.com/dennisonbertram" aria-label="GitHub"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32,16c-8.8,0-16,7.2-16,16c0,7.1,4.6,13.1,10.9,15.2 c0.8,0.1,1.1-0.3,1.1-0.8c0-0.4,0-1.4,0-2.7c-4.5,1-5.4-2.1-5.4-2.1c-0.7-1.8-1.8-2.3-1.8-2.3c-1.5-1,0.1-1,0.1-1 c1.6,0.1,2.5,1.6,2.5,1.6c1.4,2.4,3.7,1.7,4.7,1.3c0.1-1,0.6-1.7,1-2.1c-3.6-0.4-7.3-1.8-7.3-7.9c0-1.7,0.6-3.2,1.6-4.3 c-0.2-0.4-0.7-2,0.2-4.2c0,0,1.3-0.4,4.4,1.6c1.3-0.4,2.6-0.5,4-0.5c1.4,0,2.7,0.2,4,0.5c3.1-2.1,4.4-1.6,4.4-1.6 c0.9,2.2,0.3,3.8,0.2,4.2c1,1.1,1.6,2.5,1.6,4.3c0,6.1-3.7,7.5-7.3,7.9c0.6,0.5,1.1,1.5,1.1,3c0,2.1,0,3.9,0,4.4 c0,0.4,0.3,0.9,1.1,0.8C43.4,45.1,48,39.1,48,32C48,23.2,40.8,16,32,16z"/></svg></a></div>
 </header>
-<main>
-<section class="top">
-<img class="portrait" src="/img/portrait-2000.jpg" srcset="/img/portrait-1000.jpg 1000w, /img/portrait-2000.jpg 2000w" sizes="(max-width: 767px) 90vw, 460px" width="3594" height="5226" alt="Portrait of Dennison Bertram in a white shirt standing in a concrete room">
-<div class="text">
-<p class="sp"></p>
-<p>Dennison Bertram is a founder, developer evangelist, and builder. He likes to work at the edge of new technologies — where the protocols haven't settled, the tools don't exist yet, and the obvious answer is to build the thing yourself.</p>
-<p>He's spent the last decade founding and scaling developer-facing products at frontier moments: an early Bitcoin exchange in 2012, the first Developer Advocate at OpenZeppelin, the low-code Ethereum tooling at DappHero, and most recently as founder and CEO of <strong>Tally.xyz</strong> — the DAO platform that became the standard for on-chain governance, transferring over $1b, and helping teams govern over $40b.</p>
+<main id="top">
+<section class="bio">
+<p>Dennison Bertram is a founder, developer evangelist, and builder. He likes to work at the edge of new technologies &mdash; where the protocols haven't settled, the tools don't exist yet, and the obvious answer is to build the thing yourself.</p>
+<p>He's spent the last decade founding and scaling developer-facing products at frontier moments: an early Bitcoin exchange in 2012, the first Developer Advocate at OpenZeppelin, the low-code Ethereum tooling at DappHero, and most recently as founder and CEO of <b>Tally.xyz</b> &mdash; the DAO platform that became the standard for on-chain governance, transferring over $1b, and helping teams govern over $40b.</p>
 <p>Before software, Dennison spent years as an internationally published fashion photographer and creative technologist, working with Elle, Vogue, Gucci, Louis Vuitton, Heineken, GQ, and others. He still cares deeply about how things look and feel.</p>
-<p>He lives in Brooklyn and is reachable at <a href="mailto:dennison@dennisonbertram.com"><strong>dennison@dennisonbertram.com</strong></a>.</p>
-<p class="sp"></p>
-<p class="sp"></p>
-<p>Currently building with AI. Some projects:</p>
-<p class="sp"></p>
-<p><a href="https://www.deepemail.sh/" target="_blank" rel="noopener">Deep Email</a> - A context layer for email agents</p>
-<p><a href="https://www.agentic.hosting/" target="_blank" rel="noopener">Agentic.hosting</a> - AI first platform-as-a-service</p>
-<p><a href="https://github.com/dennisonbertram/lgrep" target="_blank" rel="noopener">Lgrep</a> - Local Semantic Code Search</p>
-<p><a href="https://github.com/dennisonbertram/TaxGPT" target="_blank" rel="noopener">TaxGPT</a> - Fine tuned local model for US Tax code</p>
-<p><a href="https://github.com/dennisonbertram/go-code" target="_blank" rel="noopener">Go Code</a> -API first Go based LLM Coding Harness</p>
-<p class="sp"></p>
+<p>He lives in Brooklyn and is reachable at <a href="mailto:dennison@dennisonbertram.com"><b>dennison@dennisonbertram.com</b></a>.</p>
+<p style="margin-top:32px">Currently building with AI. Some projects:</p>
+</section>
+
+<hr style="margin-top:24px">
+<section id="lead">
+<h2>Lead work</h2>
+
+<article class="lead">
+<div>
+<h3>free-pi</h3>
+<p>A free, ad-supported coding agent, live since 23 October 2026.</p>
+<p class="meta"><a class="go" href="https://freepi.ai">freepi.ai</a> &nbsp; <a class="go" href="https://github.com/dennisonbertram/free-pi-cli">github.com/dennisonbertram/free-pi-cli</a></p>
+<div style="margin-top:18px"><div class="bignum">12,133</div><p class="cmp">npm downloads in the last 30 days &middot; 45 GitHub stars on the CLI</p></div>
+</div>
+<figure class="vis">
+<div class="bars" role="img" aria-label="Weekly npm downloads of free-pi-cli: week of Oct 12, 284; Oct 19, 2,305; Oct 26, 3,643; Nov 2, 4,446">
+<div><span class="v">284</span><i style="height:9px"></i><span class="w">Oct 12</span></div>
+<div><span class="v">2,305</span><i style="height:72px"></i><span class="w">Oct 19</span></div>
+<div><span class="v">3,643</span><i style="height:114px"></i><span class="w">Oct 26</span></div>
+<div><span class="v">4,446</span><i style="height:139px"></i><span class="w">Nov 2</span></div>
+</div>
+<figcaption>Weekly npm downloads of free-pi-cli (weeks starting Monday)</figcaption>
+</figure>
+</article>
+
+<article class="lead">
+<div>
+<h3>A color model trained on fashion</h3>
+<p>A model that learned how designers combine colors, trained on palettes from 1.59M Vogue Runway images.</p>
+<p class="meta"><span class="private">private repo, write-up TBD</span></p>
+</div>
+<div class="vis">
+<div class="bignum">0.235</div>
+<p class="cmp">top-1 accuracy, versus <b>0.062</b> for nearest neighbor</p>
+<div class="pal" aria-hidden="true">
+<div><i style="background:#2b2a33"></i><i style="background:#8c3b3b"></i><i style="background:#d9b99b"></i><i style="background:#e8e2d6"></i><i style="background:#4f6b5a"></i></div>
+<div><i style="background:#1d2a44"></i><i style="background:#5a7ba6"></i><i style="background:#c9d6e3"></i><i style="background:#e1c27a"></i><i style="background:#7a4a2b"></i></div>
+<div><i style="background:#111"></i><i style="background:#6b1f2a"></i><i style="background:#b8433c"></i><i style="background:#e8a58f"></i><i style="background:#f3e9e0"></i></div>
+</div>
+<p class="cap">Illustrative palettes drawn in CSS. They are not model output.</p>
+</div>
+</article>
+
+<article class="lead">
+<div>
+<h3>Steering a full-duplex voice model</h3>
+<p>Letting an outside LLM decide what a real-time voice model says without breaking its natural timing.</p>
+<p class="meta"><span class="private">private repo, write-up TBD</span></p>
+</div>
+<div class="vis">
+<div class="bignum">4.4%</div>
+<p class="cmp">missed target words, down from <b>14.3%</b></p>
+</div>
+</article>
+
+<article class="lead">
+<div>
+<h3>Character Flow</h3>
+<p>A node editor for generating consistent AI characters, sets and video.</p>
+<p class="meta"><a class="go" href="https://github.com/dennisonbertram/ai-charecter-generator">github.com/dennisonbertram/ai-charecter-generator</a></p>
+</div>
+<figure class="vis"><img src="/img/cf-graph.png" alt="Character Flow canvas with Character, Generate image, Reference image and Style blocks wired together" loading="lazy"><figcaption>The canvas: blocks wired into generate blocks. Results not yet run in this screenshot.</figcaption></figure>
+</article>
+</section>
+
+<hr style="margin-top:0">
+<section id="supporting">
+<h2>Supporting work</h2>
+<div class="rows">
+<div><div><h3>C(12,6,4) = 41</h3><p class="meta"><a class="go" href="https://github.com/dennisonbertram/covering-number-c12-6-4">covering-number-c12-6-4</a></p></div><p>A computer-assisted proof of a covering number whose bounds were previously 40 to 41.</p></div>
+<div><div><h3>jev-browser</h3><p class="meta"><a class="go" href="https://github.com/dennisonbertram/jev-browser">jev-browser</a></p></div><p>A browser agent that picks from numbered page controls: 25 of 27 tasks at a median 1.3 s.</p></div>
+<div><div><h3>emulsion</h3><p class="meta"><a class="go" href="https://github.com/dennisonbertram/emulsion">emulsion</a></p></div><p>A storyboard-blocking app that Claude edits live, exporting camera clips for video models.</p></div>
+<div><div><h3>claudberghini</h3><p class="meta"><a class="go" href="https://github.com/dennisonbertram/claudberghini">claudberghini</a></p></div><p>Claude Code driving Llama 3.1 8B on Taalas silicon at about 14,500 tokens per second.</p></div>
+<div><div><h3>Synthetic Users</h3><p class="meta"><a class="go" href="https://syntheticusers.io">syntheticusers.io</a></p></div><p>AI agents walk a staging site as real users would and return a UX report.</p></div>
 </div>
 </section>
+
 <hr>
-<section class="cv">
+<section id="progress">
+<h2>In progress</h2>
+<article class="lead" style="border:0;padding:0;margin:0">
+<div>
+<h3>nano_accel <span class="tag">simulation and layout, not fabricated</span></h3>
+<p class="meta"><a class="go" href="https://github.com/dennisonbertram/chip-design">github.com/dennisonbertram/chip-design</a></p>
+<p>An INT4 language-model inference chip taken from RTL to layout with open-source tools.</p>
+<div style="display:flex;gap:40px;flex-wrap:wrap">
+<div class="stat"><span class="n">14,604</span><span class="l">tokens/s at 100 MHz</span></div>
+<div class="stat"><span class="n">0.314 mm&sup2;</span><span class="l">layout area</span></div>
+</div>
+</div>
+<figure class="vis small" style="max-width:280px"><img src="/img/chip.jpg" alt="Zoomed detail of the nano_accel layout" loading="lazy"><figcaption>Layout detail (GDS zoom).</figcaption></figure>
+</article>
+</section>
+
+<hr>
+<section id="more">
+<h2>More</h2>
+<div class="rows">
+<div><h3 class="mono" style="font-size:13px"><a href="https://github.com/dennisonbertram/solidity-model">On-chain LLM</a></h3><p>A 3,800-parameter transformer running inside the EVM.</p></div>
+<div><h3 class="mono" style="font-size:13px"><a href="https://github.com/dennisonbertram/6502-EVM-Emulator">6502-EVM-Emulator</a></h3><p>A MOS 6502 CPU emulator in Solidity that boots EhBASIC on the EVM.</p></div>
+<div><h3 class="mono" style="font-size:13px"><a href="https://github.com/dennisonbertram/flipbook-research">flipbook-research</a></h3><p>Real-time neural canvas rendering.</p></div>
+<div><h3 class="mono" style="font-size:13px">Agent Wars</h3><p>Betting on AI-generated fights, with on-chain settlement.</p></div>
+<div><h3 class="mono" style="font-size:13px">Quietly</h3><p>Learns silently mouthed words from a webcam.</p></div>
+<div><h3 class="mono" style="font-size:13px"><a href="https://github.com/dennisonbertram/agentic-hosting">agentic-hosting</a></h3><p>A self-hosted PaaS run by AI agents. 34 stars.</p></div>
+<div><h3 class="mono" style="font-size:13px"><a href="https://github.com/dennisonbertram/deep-claude">deep-claude</a></h3><p>127 stars.</p></div>
+<div><h3 class="mono" style="font-size:13px"><a href="https://github.com/dennisonbertram/lgrep">lgrep</a></h3><p>Local semantic code search. 87 stars.</p></div>
+<div><h3 class="mono" style="font-size:13px"><a href="https://github.com/dennisonbertram/steal-react-component">steal-react-component</a></h3><p>66 stars.</p></div>
+</div>
+</section>
+
+<hr>
+<section id="cv" class="cv">
 <h2>CV:</h2>
-<p><strong>Founder + CEO</strong>- Tally.xyz</p>
-<p>Platform for on-chain governance. Took Tally from zero through Series A as the category-defining platform for token-based organizations — 1M+ users, $1B+ in on-chain transfers, $40B+ in governed assets across 500+ organizations including Uniswap and most of the top crypto protocols by market cap. Backed by Blockchain Capital, Placeholder, Castle Island, and 1KX.</p>
-<p class="sp"></p>
-<p><strong>Founder — DappHero</strong> <em>(2019 – 2020)</em> Low-code platform for shipping Ethereum applications via HTML attributes — meeting web developers where they already were. Backed by Notation Capital.</p>
-<p class="sp"></p>
-<p><strong>First Developer Advocate — OpenZeppelin</strong> <em>(2018 – 2019)</em> Early employee. Pioneered the DevRel function at the leading smart-contract security firm — whose open-source libraries underpin virtually the entire Ethereum ecosystem and secure hundreds of billions of dollars in value.</p>
-<p><strong><br>Founder — BuyBTC</strong> <em>(2012)</em> The first Bitcoin exchange in the Czech Republic. Built it, ran it, navigated early regulatory ambiguity, and ultimately wound it down after regulator intervention. The earliest formative experience in building frontier technology before the playbook exists.</p>
-<p class="sp"></p>
-<p><strong>Creative Technologist &amp; Fashion Photographer</strong> <em>(prior)</em> Vogue, Elle, Marie Claire, Gucci, Louis Vuitton, Nespresso, Heineken, GQ, InStyle, Dolce &amp; Gabbana, FURLA, Cosmopolitan, VICE, i-D.</p>
+<p><b>Founder + CEO</b>- Tally.xyz</p>
+<p>Platform for on-chain governance. Took Tally from zero through Series A as the category-defining platform for token-based organizations &mdash; 1M+ users, $1B+ in on-chain transfers, $40B+ in governed assets across 500+ organizations including Uniswap and most of the top crypto protocols by market cap. Backed by Blockchain Capital, Placeholder, Castle Island, and 1KX.</p>
+<p style="margin-top:28px"><b>Founder &mdash; DappHero</b> <i>(2019 &ndash; 2020)</i> Low-code platform for shipping Ethereum applications via HTML attributes &mdash; meeting web developers where they already were. Backed by Notation Capital.</p>
+<p style="margin-top:28px"><b>First Developer Advocate &mdash; OpenZeppelin</b> <i>(2018 &ndash; 2019)</i> Early employee. Pioneered the DevRel function at the leading smart-contract security firm &mdash; whose open-source libraries underpin virtually the entire Ethereum ecosystem and secure hundreds of billions of dollars in value.</p>
+<p style="margin-top:28px"><b>Founder &mdash; BuyBTC</b> <i>(2012)</i> The first Bitcoin exchange in the Czech Republic. Built it, ran it, navigated early regulatory ambiguity, and ultimately wound it down after regulator intervention. The earliest formative experience in building frontier technology before the playbook exists.</p>
+<p style="margin-top:28px"><b>Creative Technologist &amp; Fashion Photographer</b> <i>(prior)</i> Vogue, Elle, Marie Claire, Gucci, Louis Vuitton, Nespresso, Heineken, GQ, InStyle, Dolce &amp; Gabbana, FURLA, Cosmopolitan, VICE, i-D.</p>
 </section>
-<section class="prev">
-<p class="sp"></p>
-<p><strong>Previously</strong>: Creative Technologist</p>
-<p><strong>Clients and Projects</strong>: Vogue, Elle, Marie Claire, Gucci, Louis Vuitton, Nespresso, Heineken, GQ, InStyle, Dolce&amp;Gabbana, FURLA, Cosmopolitan, VICE, I-D. </p>
-</section>
-<section class="gallery">
-<img src="/img/g/001.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/002.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/003.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/004.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/005.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/006.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/007.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/008.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/009.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/010.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/011.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/012.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/013.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/014.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/015.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/016.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/017.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/018.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/019.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/020.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/021.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/022.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/023.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/024.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/025.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/026.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/027.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/028.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/029.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/030.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/031.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/032.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/033.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/034.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/035.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/036.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/037.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/038.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/039.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/040.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/041.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/042.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/043.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/044.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/045.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/046.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/047.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/048.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/049.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/050.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/051.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/052.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/053.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/054.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/055.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/056.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/057.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/058.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/059.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/060.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/061.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/062.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/063.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/064.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/065.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/066.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/067.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/068.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/069.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/070.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/071.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/072.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/073.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/074.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/075.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/076.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/077.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/078.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/079.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/080.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/081.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/082.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/083.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/084.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/085.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/086.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/087.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/088.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/089.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/090.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/091.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/092.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/093.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/094.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/095.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/096.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/097.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/098.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/099.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/100.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/101.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/102.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/103.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/104.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/105.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/106.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/107.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/108.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/109.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/110.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/111.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/112.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/113.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/114.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/115.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/116.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/117.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/118.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/119.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/120.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/121.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/122.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/123.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/124.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/125.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/126.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/127.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/128.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/129.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/130.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/131.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/132.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/133.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/134.jpg" width="260" height="260" alt="" loading="lazy">
-<img src="/img/g/135.jpg" width="260" height="260" alt="" loading="lazy">
-</section>
-<div class="social foot"><a href="https://www.linkedin.com/in/dennison-bertram-ab5bb22" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"/></svg></a><a href="https://github.com/crazyrabbitLTC" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32,16c-8.8,0-16,7.2-16,16c0,7.1,4.6,13.1,10.9,15.2 c0.8,0.1,1.1-0.3,1.1-0.8c0-0.4,0-1.4,0-2.7c-4.5,1-5.4-2.1-5.4-2.1c-0.7-1.8-1.8-2.3-1.8-2.3c-1.5-1,0.1-1,0.1-1 c1.6,0.1,2.5,1.6,2.5,1.6c1.4,2.4,3.7,1.7,4.7,1.3c0.1-1,0.6-1.7,1-2.1c-3.6-0.4-7.3-1.8-7.3-7.9c0-1.7,0.6-3.2,1.6-4.3 c-0.2-0.4-0.7-2,0.2-4.2c0,0,1.3-0.4,4.4,1.6c1.3-0.4,2.6-0.5,4-0.5c1.4,0,2.7,0.2,4,0.5c3.1-2.1,4.4-1.6,4.4-1.6 c0.9,2.2,0.3,3.8,0.2,4.2c1,1.1,1.6,2.5,1.6,4.3c0,6.1-3.7,7.5-7.3,7.9c0.6,0.5,1.1,1.5,1.1,3c0,2.1,0,3.9,0,4.4 c0,0.4,0.3,0.9,1.1,0.8C43.4,45.1,48,39.1,48,32C48,23.2,40.8,16,32,16z"/></svg></a></div>
+
+<footer id="contact">
+<div class="social"><a href="https://www.linkedin.com/in/dennison-bertram-ab5bb22" aria-label="LinkedIn"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"/></svg></a><a href="https://github.com/dennisonbertram" aria-label="GitHub"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32,16c-8.8,0-16,7.2-16,16c0,7.1,4.6,13.1,10.9,15.2 c0.8,0.1,1.1-0.3,1.1-0.8c0-0.4,0-1.4,0-2.7c-4.5,1-5.4-2.1-5.4-2.1c-0.7-1.8-1.8-2.3-1.8-2.3c-1.5-1,0.1-1,0.1-1 c1.6,0.1,2.5,1.6,2.5,1.6c1.4,2.4,3.7,1.7,4.7,1.3c0.1-1,0.6-1.7,1-2.1c-3.6-0.4-7.3-1.8-7.3-7.9c0-1.7,0.6-3.2,1.6-4.3 c-0.2-0.4-0.7-2,0.2-4.2c0,0,1.3-0.4,4.4,1.6c1.3-0.4,2.6-0.5,4-0.5c1.4,0,2.7,0.2,4,0.5c3.1-2.1,4.4-1.6,4.4-1.6 c0.9,2.2,0.3,3.8,0.2,4.2c1,1.1,1.6,2.5,1.6,4.3c0,6.1-3.7,7.5-7.3,7.9c0.6,0.5,1.1,1.5,1.1,3c0,2.1,0,3.9,0,4.4 c0,0.4,0.3,0.9,1.1,0.8C43.4,45.1,48,39.1,48,32C48,23.2,40.8,16,32,16z"/></svg></a></div>
+<a href="https://github.com/dennisonbertram">GitHub</a>
+<a href="#">Resume (TBD)</a>
+</footer>
 </main>
 </body>
 </html>
